@@ -24,8 +24,7 @@ def main():
         roas.append({
             'asn': f'AS{asn}',
             'prefix': prefix,
-            'maxLength': maxlen,
-            'ta': trust_anchor
+            'maxLength': maxlen
         })
 
     output = {
