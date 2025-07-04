@@ -1,0 +1,65 @@
+name: Update ROA JSON from IRR
+
+on:
+  schedule:
+    - cron: "0 3 * * *"  # 每天 UTC 03:00 自动运行
+  workflow_dispatch:     # 支持手动触发
+
+jobs:
+  update:
+    runs-on: ubuntu-latest
+
+    steps:
+    - name: Checkout repository
+      uses: actions/checkout@v4
+
+    - name: Install dependencies
+      run: |
+        sudo apt update
+        sudo apt install -y bgpq4 python3
+
+    - name: Fetch IRR prefixes and convert to ROA JSON
+      run: |
+        AS_SET="AS213605:AS-OSPF"
+        ASN=213605
+        TRUST_ANCHOR="IRR-MANUAL"
+        TMP_JSON="bgpq4_output.json"
+        OUTPUT_FILE="roa_for_stayrtr.json"
+
+        echo "[*] Fetching IRR prefix list..."
+        bgpq4 -j -6 "${AS_SET}" > "${TMP_JSON}"
+
+        echo "[*] Converting to ROA format..."
+        python3 -c "
+import json, time
+data = json.load(open('${TMP_JSON}'))
+roas = []
+for entry in data.get('NN', []):
+    prefix = entry['prefix']
+    maxlen = int(prefix.split('/')[1])
+    roas.append({
+        'asn': 'AS${ASN}',
+        'prefix': prefix,
+        'maxLength': maxlen,
+        'ta': '${TRUST_ANCHOR}'
+    })
+
+output = {
+    'metadata': {
+        'counts': len(roas),
+        'generated': int(time.time()),
+        'valid': int(time.time())
+    },
+    'roas': roas
+}
+
+json.dump(output, open('${OUTPUT_FILE}', 'w'), indent=2)
+"
+
+    - name: Commit and push changes
+      run: |
+        git config user.name "GitHub Action"
+        git config user.email "action@github.com"
+        git add roa_for_stayrtr.json
+        git commit -m "🤖 Update ROA JSON from IRR ($(date -u +%F))" || echo "No changes to commit"
+        git push
