@@ -1,141 +1,119 @@
 {
   "metadata": {
     "counts": 22,
-    "generated": 1751671695,
-    "valid": 1751671695
+    "generated": 1751673073,
+    "valid": 1751673073
   },
   "roas": [
     {
       "asn": "AS213605",
       "prefix": "2a0f:9400:6110::/48",
-      "maxLength": 48,
-      "ta": "IRR-MANUAL"
+      "maxLength": 48
     },
     {
       "asn": "AS213605",
       "prefix": "2a14:67c1:a020::/44",
-      "maxLength": 44,
-      "ta": "IRR-MANUAL"
+      "maxLength": 44
     },
     {
       "asn": "AS213605",
       "prefix": "2a14:67c1:a020::/48",
-      "maxLength": 48,
-      "ta": "IRR-MANUAL"
+      "maxLength": 48
     },
     {
       "asn": "AS213605",
       "prefix": "2a14:67c1:a021::/48",
-      "maxLength": 48,
-      "ta": "IRR-MANUAL"
+      "maxLength": 48
     },
     {
       "asn": "AS213605",
       "prefix": "2a14:67c1:a023::/48",
-      "maxLength": 48,
-      "ta": "IRR-MANUAL"
+      "maxLength": 48
     },
     {
       "asn": "AS213605",
       "prefix": "2a14:67c1:a024::/48",
-      "maxLength": 48,
-      "ta": "IRR-MANUAL"
+      "maxLength": 48
     },
     {
       "asn": "AS213605",
       "prefix": "2a14:67c1:a02a::/48",
-      "maxLength": 48,
-      "ta": "IRR-MANUAL"
+      "maxLength": 48
     },
     {
       "asn": "AS213605",
       "prefix": "2a14:67c1:a02f::/48",
-      "maxLength": 48,
-      "ta": "IRR-MANUAL"
+      "maxLength": 48
     },
     {
       "asn": "AS213605",
       "prefix": "2a14:67c1:a066::/48",
-      "maxLength": 48,
-      "ta": "IRR-MANUAL"
+      "maxLength": 48
     },
     {
       "asn": "AS213605",
       "prefix": "2a14:67c1:b000::/48",
-      "maxLength": 48,
-      "ta": "IRR-MANUAL"
+      "maxLength": 48
     },
     {
       "asn": "AS213605",
       "prefix": "2a14:67c1:b100::/40",
-      "maxLength": 40,
-      "ta": "IRR-MANUAL"
+      "maxLength": 40
     },
     {
       "asn": "AS213605",
       "prefix": "2a14:67c1:b100::/48",
-      "maxLength": 48,
-      "ta": "IRR-MANUAL"
+      "maxLength": 48
     },
     {
       "asn": "AS213605",
       "prefix": "2a14:67c1:b101::/48",
-      "maxLength": 48,
-      "ta": "IRR-MANUAL"
+      "maxLength": 48
     },
     {
       "asn": "AS213605",
       "prefix": "2a14:67c1:b102::/48",
-      "maxLength": 48,
-      "ta": "IRR-MANUAL"
+      "maxLength": 48
     },
     {
       "asn": "AS213605",
       "prefix": "2a14:67c1:b103::/48",
-      "maxLength": 48,
-      "ta": "IRR-MANUAL"
+      "maxLength": 48
     },
     {
       "asn": "AS213605",
       "prefix": "2a14:67c1:b104::/48",
-      "maxLength": 48,
-      "ta": "IRR-MANUAL"
+      "maxLength": 48
     },
     {
       "asn": "AS213605",
       "prefix": "2a14:67c1:b105::/48",
-      "maxLength": 48,
-      "ta": "IRR-MANUAL"
+      "maxLength": 48
     },
     {
       "asn": "AS213605",
       "prefix": "2a14:67c1:b106::/48",
-      "maxLength": 48,
-      "ta": "IRR-MANUAL"
+      "maxLength": 48
     },
     {
       "asn": "AS213605",
       "prefix": "2a14:67c1:b107::/48",
-      "maxLength": 48,
-      "ta": "IRR-MANUAL"
+      "maxLength": 48
     },
     {
       "asn": "AS213605",
       "prefix": "2a14:67c1:b130::/48",
-      "maxLength": 48,
-      "ta": "IRR-MANUAL"
+      "maxLength": 48
     },
     {
       "asn": "AS213605",
       "prefix": "2a14:7581:3100::/40",
-      "maxLength": 40,
-      "ta": "IRR-MANUAL"
+      "maxLength": 40
     },
     {
       "asn": "AS213605",
       "prefix": "2a14:7581:3101::/48",
-      "maxLength": 48,
-      "ta": "IRR-MANUAL"
+      "maxLength": 48
     }
   ]
 }
