@@ -30,31 +30,7 @@ jobs:
         bgpq4 -j -6 "${AS_SET}" > "${TMP_JSON}"
 
         echo "[*] Converting to ROA format..."
-        python3 -c "
-import json, time
-data = json.load(open('${TMP_JSON}'))
-roas = []
-for entry in data.get('NN', []):
-    prefix = entry['prefix']
-    maxlen = int(prefix.split('/')[1])
-    roas.append({
-        'asn': 'AS${ASN}',
-        'prefix': prefix,
-        'maxLength': maxlen,
-        'ta': '${TRUST_ANCHOR}'
-    })
-
-output = {
-    'metadata': {
-        'counts': len(roas),
-        'generated': int(time.time()),
-        'valid': int(time.time())
-    },
-    'roas': roas
-}
-
-json.dump(output, open('${OUTPUT_FILE}', 'w'), indent=2)
-"
+        python3 update_ospf.py "${TMP_JSON}" "${OUTPUT_FILE}" "${ASN}" "${TRUST_ANCHOR}"
 
     - name: Commit and push changes
       run: |
