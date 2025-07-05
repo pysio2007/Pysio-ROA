@@ -1,19 +1,14 @@
 {
   "metadata": {
-    "counts": 22,
-    "generated": 1751673073,
-    "valid": 1751673073
+    "counts": 19,
+    "generated": 1751674399,
+    "valid": 1751674399
   },
   "roas": [
     {
       "asn": "AS213605",
       "prefix": "2a0f:9400:6110::/48",
       "maxLength": 48
-    },
-    {
-      "asn": "AS213605",
-      "prefix": "2a14:67c1:a020::/44",
-      "maxLength": 44
     },
     {
       "asn": "AS213605",
@@ -54,11 +49,6 @@
       "asn": "AS213605",
       "prefix": "2a14:67c1:b000::/48",
       "maxLength": 48
-    },
-    {
-      "asn": "AS213605",
-      "prefix": "2a14:67c1:b100::/40",
-      "maxLength": 40
     },
     {
       "asn": "AS213605",
@@ -104,11 +94,6 @@
       "asn": "AS213605",
       "prefix": "2a14:67c1:b130::/48",
       "maxLength": 48
-    },
-    {
-      "asn": "AS213605",
-      "prefix": "2a14:7581:3100::/40",
-      "maxLength": 40
     },
     {
       "asn": "AS213605",
