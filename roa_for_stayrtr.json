@@ -1,8 +1,8 @@
 {
   "metadata": {
-    "counts": 20,
-    "generated": 1752292226,
-    "valid": 1752292226
+    "counts": 21,
+    "generated": 1752378976,
+    "valid": 1752378976
   },
   "roas": [
     {
@@ -98,6 +98,11 @@
     {
       "asn": "AS213605",
       "prefix": "2a14:67c1:b131::/48",
+      "maxLength": 48
+    },
+    {
+      "asn": "AS213605",
+      "prefix": "2a14:67c1:b132::/48",
       "maxLength": 48
     },
     {
